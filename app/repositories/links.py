@@ -19,7 +19,9 @@ class LinksRepository(BaseRepository):
 
 
     async def get_url(self, short_code):
-        query = select(self.model).filter_by(short_code=short_code)
+        query = select(self.model.original_url).filter_by(short_code=short_code)
+        print(query)
         result = await self.session.execute(query)
         original_url = result.scalars().one()
+        print(original_url)
         return original_url

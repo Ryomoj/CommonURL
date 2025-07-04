@@ -2,21 +2,18 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    DB_HOST: str
-    DB_PORT: int
-    DB_USER: str
-    DB_PASS: str
-    DB_NAME: str
+    DB_HOST: str = "localhost"
+    DB_PORT: int = 5432
+    DB_USER: str = "postgres"
+    DB_PASS: int = 0000
+    DB_NAME: str = "commonurl"
 
 
     @property
     def DB_URL(self):
-        return f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+        return "postgresql+asyncpg://postgres:0000@localhost:5432/commonurl"
 
-    # JWT_SECRET_KEY: str
-    # JWT_ALGORITHM: str
-    # ACCESS_TOKEN_EXPIRE_MINUTES: int
 
-    model_config = SettingsConfigDict(env_file="")
+    model_config = SettingsConfigDict(env_file=".env")
 
 settings = Settings()

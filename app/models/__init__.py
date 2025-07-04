@@ -1,3 +1,3 @@
-from app.models.links import LinksOrm
+from models.links import LinksOrm
 
 __all__ = ["LinksOrm"]

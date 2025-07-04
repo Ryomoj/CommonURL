@@ -1,25 +1,27 @@
 from datetime import datetime
-from urllib.request import Request
 
 from fastapi import APIRouter, HTTPException
 from starlette.responses import RedirectResponse
 
-from app.schemas.links import LinkSchema, LinkResponseSchema
-from app.services.links_service import generate_short_code
+from app.schemas.links import LinkAddSchema, LinkResponseSchema
+from app.utils.links_utils import generate_short_code
 from app.utils.dependencies import DatabaseDep
 
-router = APIRouter(prefix="/links")
+router = APIRouter(prefix="")
 
-@router.post("")
-async def resize_new_url(data: LinkSchema, db: DatabaseDep):
+@router.post("/create_link/", description="Создать новую ссылку")
+async def resize_new_url(data: LinkAddSchema, db: DatabaseDep):
     new_code = generate_short_code()
     _data = LinkResponseSchema(
-        short_url=new_code,
-        original_url=data.original_url,
-        created_at=datetime.now()
+        short_code=new_code,
+        created_at=datetime.now(),
+        **data.model_dump()
     )
-    new_data = await db.links.add_data(_data)
-    return {"new_data": new_data}
+    print(_data)
+    await db.links.add_data(_data)
+    await db.commit()
+    new_short_link = f"http://127.0.0.1:8000/links/{new_code}"
+    return {"new_short_link": new_short_link}
 
 
 @router.get("/{short_code}")
@@ -28,7 +30,8 @@ async def redirect_to_original(
     # request: Request,  # Для доступа к данным запроса (IP, User-Agent)
     db: DatabaseDep
 ):
-    original_url = db.links.get_url(short_code)
+    print(short_code)
+    original_url = await db.links.get_url(short_code)
     if not original_url:
         raise HTTPException(status_code=404, detail="Link not found")
 
@@ -39,5 +42,5 @@ async def redirect_to_original(
     #     user_agent=request.headers.get("user-agent"),
     # )
 
-    # Редирект с кодом 307
-    return RedirectResponse(url=original_url, status_code=307)
+    print(original_url)
+    return RedirectResponse(original_url)

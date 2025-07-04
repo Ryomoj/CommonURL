@@ -5,29 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e491953-4e02-41ad-93e9-242b815d5dcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CommonURL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/links.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/links_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/stats_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/db_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/dependencies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CommonURL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonURL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/links_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/links_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Python Script" />
       </list>
     </option>
@@ -53,21 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ryomo/PycharmProjects/CommonURL/app&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.config.executor": "Run",
+    "Python.links.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.test_connection.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/ryomo/PycharmProjects/TestProject/test_project",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ryomo\PycharmProjects\CommonURL\app" />
       <recent name="C:\Users\ryomo\PycharmProjects\CommonURL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ryomo\PycharmProjects\CommonURL\app\utils" />
       <recent name="C:\Users\ryomo\PycharmProjects\CommonURL" />
       <recent name="C:\Users\ryomo\PycharmProjects\CommonURL\app" />
     </key>
@@ -89,5 +92,8 @@
       <updated>1744276188445</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
   </component>
 </project>
