@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Ваша короткая ссылка готова!</h1>
+
+        <div class="result-box">
+            <div class="original-url">
+                <strong>Исходная ссылка:</strong>
+                <a href="{{ original_url }}" target="_blank">{{ original_url }}</a>
+            </div>
+
+            <div class="short-url">
+                <strong>Короткая ссылка:</strong>
+                <a href="{{ short_url }}" target="_blank" id="short-link">{{ short_url }}</a>
+            </div>
+        <div> </div>
+            <div class="actions">
+                <a href="/" class="btn">Сократить еще одну</a>
+                <button onclick="navigator.clipboard.writeText('{{ short_url }}')"
+                        class="btn copy-btn">Копировать</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e491953-4e02-41ad-93e9-242b815d5dcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CommonURL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonURL.iml" afterDir="false" />
+    <list default="true" id="8e491953-4e02-41ad-93e9-242b815d5dcb" name="Changes" comment="mvp">
+      <change afterPath="$PROJECT_DIR$/app/models/stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repositories/stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/links.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/links.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/links.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/links.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/links_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/links_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/db_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dependencies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
@@ -42,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ryomoj&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ryomoj/CommonURL&quot;,
+    &quot;accountId&quot;: &quot;4292ad49-f37c-44cf-9ce0-a0bfdd41a6a9&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -51,19 +57,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.config.executor": "Run",
-    "Python.links.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.test_connection.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ryomo/PycharmProjects/TestProject/test_project",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.links.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_connection.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ryomo/PycharmProjects/TestProject/test_project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ryomo\PycharmProjects\CommonURL\app" />
@@ -91,9 +97,22 @@
       <option name="presentableId" value="Default" />
       <updated>1744276188445</updated>
     </task>
+    <task id="LOCAL-00001" summary="mvp">
+      <option name="closed" value="true" />
+      <created>1751621777291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751621777291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mvp" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
   </component>
 </project>
