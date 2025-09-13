@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e491953-4e02-41ad-93e9-242b815d5dcb" name="Changes" comment="mvp">
-      <change afterPath="$PROJECT_DIR$/app/models/stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/result.html" afterDir="false" />
+    <list default="true" id="8e491953-4e02-41ad-93e9-242b815d5dcb" name="Changes" comment="MVP+Front+Stats">
+      <change afterPath="$PROJECT_DIR$/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/links_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/links.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/links.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/links.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/db_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/connectors/redis_connector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/stats_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751621777291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="MVP+Front+Stats">
+      <option name="closed" value="true" />
+      <created>1752359918727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752359918727</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -113,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
+    <MESSAGE value="MVP+Front+Stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVP+Front+Stats" />
   </component>
 </project>
