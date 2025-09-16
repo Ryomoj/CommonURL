@@ -29,6 +29,6 @@ class RedisConnector:
 
     async def disconnect(self):
         if self.redis:
-            await self.redis.close()
+            await self.redis.aclose()
 
-redis_connector = RedisConnector(host="localhost", port=6379)
+redis_connector = RedisConnector(host="commonurl_cache", port=6379)

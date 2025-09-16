@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
     await redis_connector.disconnect()
 
 app = FastAPI(lifespan=lifespan)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 app.add_middleware(
     CORSMiddleware,
@@ -46,4 +46,4 @@ async def get_index_html(request: Request):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app")
+    uvicorn.run("main:app", host="0.0.0.0")

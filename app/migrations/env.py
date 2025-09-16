@@ -22,7 +22,7 @@ config = context.config
 
 config.set_main_option(
     "sqlalchemy.url",
-    f"postgresql+asyncpg://postgres:0000@localhost:5432/commonurl?async_fallback=True")
+    f"postgresql+asyncpg://admin:0000@database:5432/commonurl?async_fallback=True")
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.

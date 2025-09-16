@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    DB_HOST: str = "localhost"
+    DB_HOST: str = "database"
     DB_PORT: int = 5432
-    DB_USER: str = "postgres"
+    DB_USER: str = "admin"
     DB_PASS: int = 0000
     DB_NAME: str = "commonurl"
 
@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     @property
     def DB_URL(self):
-        return "postgresql+asyncpg://postgres:0000@localhost:5432/commonurl"
+        return "postgresql+asyncpg://admin:0000@database:5432/commonurl"
 
 
     model_config = SettingsConfigDict(env_file=".env")

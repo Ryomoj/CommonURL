@@ -1,0 +1,43 @@
+services:
+  commonurl_back_service:
+    container_name: "commonurl_back"
+    build:
+      context: .
+    ports:
+      - "7777:8000"
+    networks:
+      - myNetwork
+    env_file:
+      - .env
+    depends_on:
+      - database
+
+  database:
+    image: postgres:16
+    container_name: "commonurl_db"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: commonurl
+    ports:
+      - "5432:5432"
+    networks:
+      - myNetwork
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+  redis:
+    image: redis:7.4
+    container_name: "commonurl_cache"
+    ports:
+      - "6379:6379"
+    networks:
+      - myNetwork
+
+networks:
+  myNetwork:
+    external: true
+
+volumes:
+  postgres_data:
